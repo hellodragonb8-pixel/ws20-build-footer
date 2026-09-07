@@ -15,73 +15,53 @@ body {
 }
 
 .page-content {
-  min-height: calc(100vh - 335px);
+  min-height: calc(100vh - 80px);
 }
 
 .site-footer {
   display: flex;
-  min-height: 335px;
+  height: 80px;
+  min-height: 80px;
   flex-direction: column;
   justify-content: space-between;
   border-top: 1px solid #ccc;
-  padding: 32px max(24px, calc((100% - 1212px) / 2));
+  padding: 17px max(24px, calc((100% - 1212px) / 2));
   background: #f4f6f8;
 }
 
 .footer-top,
-.footer-bottom,
-.channel-list,
 .legal-list {
   display: flex;
   align-items: center;
 }
 
-.footer-top,
-.footer-bottom {
+.footer-top {
   justify-content: space-between;
 }
 
 .footer-top {
-  align-items: flex-start;
+  align-items: center;
   width: calc(100% - 2px);
   height: 45px;
 }
 
-.footer-bottom {
-  width: calc(100% - 15px);
-  height: 35px;
-  margin-inline: 7px 8px;
-}
-
-.brand-icon,
-.channel-icon {
-  display: grid;
-  place-items: center;
+.brand-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   overflow: hidden;
   border-radius: 7.5px;
 }
 
 .brand-icon {
-  width: 38px;
+  width: max-content;
   height: 45px;
 }
 
-.channel-list,
 .legal-list {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.channel-list {
-  gap: 32px;
-  width: max-content;
-}
-
-.channel-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 6.33px;
 }
 
 .microsoft-glyph {
@@ -98,38 +78,11 @@ body {
   transform: scale(0.6443);
 }
 
-.channel-icon .microsoft-glyph {
-  width: 25.33px;
-  height: 25.33px;
-  background-position: -117.67px -48.33px;
-}
-
-.x-glyph {
-  width: 17.33px;
-  height: 17.33px;
-  flex: none;
-  background: url("assets/x-logo.png") center / contain no-repeat;
-}
-
-.linkedin-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/linkedin.png") center / contain no-repeat;
-}
-
-.bluesky-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/bluesky.png") center / contain no-repeat;
-}
-
-.reddit-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/reddit.png") center / contain no-repeat;
+.brand-label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
 }
 
 a {
@@ -150,33 +103,9 @@ a:focus-visible {
 
 .legal-list {
   gap: 32px;
-  width: 441px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 20px;
   white-space: nowrap;
-}
-
-.legal-list li:nth-child(1) {
-  width: 101px;
-}
-
-.legal-list li:nth-child(2) {
-  width: 47px;
-}
-
-.legal-list li:nth-child(3) {
-  width: 43px;
-}
-
-.legal-list li:nth-child(4) {
-  width: 77px;
-}
-
-.legal-list li:nth-child(5) {
-  width: 45px;
-}
-
-.copyright {
-  font-weight: 400;
 }
 
 .legal-list a {
@@ -185,13 +114,13 @@ a:focus-visible {
 
 @media (max-width: 1000px) {
   .site-footer {
+    height: auto;
     min-height: 639px;
     justify-content: flex-start;
     padding: 100px 103px 44px;
   }
 
-  .footer-top,
-  .footer-bottom {
+  .footer-top {
     display: contents;
   }
 
@@ -199,17 +128,11 @@ a:focus-visible {
     order: 1;
     width: 520px;
     height: 38px;
-    place-items: center start;
-  }
-
-  .footer-bottom nav:first-child {
-    order: 2;
-    margin-top: 25px;
   }
 
   .footer-top nav {
-    order: 3;
-    margin-top: 75px;
+    order: 2;
+    margin-top: 25px;
   }
 
   .legal-list {
@@ -217,8 +140,8 @@ a:focus-visible {
     flex-direction: column;
     gap: 0;
     width: 520px;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .legal-list li {
@@ -241,11 +164,7 @@ a:focus-visible {
   }
 
   .legal-list li:last-child {
-    height: 17px;
-  }
-
-  .channel-list {
-    gap: 24px;
+    height: 20px;
   }
 }
 
@@ -264,17 +183,11 @@ a:focus-visible {
     width: 100%;
   }
 
-  .footer-bottom nav:first-child,
   .footer-top nav {
     width: 100%;
   }
 
   .footer-top nav {
-    margin-top: 64px;
-  }
-
-  .channel-list {
-    flex-wrap: wrap;
-    width: 100%;
+    margin-top: 48px;
   }
 }
