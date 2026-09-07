@@ -31,9 +31,7 @@ body {
 .footer-top,
 .footer-bottom,
 .channel-list,
-.legal-list,
-.privacy-list,
-.privacy-choice {
+.legal-list {
   display: flex;
   align-items: center;
 }
@@ -69,8 +67,7 @@ body {
 }
 
 .channel-list,
-.legal-list,
-.privacy-list {
+.legal-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -78,7 +75,7 @@ body {
 
 .channel-list {
   gap: 32px;
-  width: 528px;
+  width: max-content;
 }
 
 .channel-icon {
@@ -107,14 +104,6 @@ body {
   background-position: -117.67px -48.33px;
 }
 
-.github-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/github.png") center / contain no-repeat;
-  filter: brightness(0);
-}
-
 .x-glyph {
   width: 17.33px;
   height: 17.33px;
@@ -141,27 +130,6 @@ body {
   height: 19.33px;
   flex: none;
   background: url("assets/reddit.png") center / contain no-repeat;
-}
-
-.microphone-glyph {
-  width: 25.33px;
-  height: 25.33px;
-  flex: none;
-  background: url("assets/microphone.png") center / contain no-repeat;
-}
-
-.tiktok-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/tiktok.png") center / contain no-repeat;
-}
-
-.youtube-glyph {
-  width: 19.33px;
-  height: 19.33px;
-  flex: none;
-  background: url("assets/youtube.png") center / contain no-repeat;
 }
 
 a {
@@ -211,41 +179,8 @@ a:focus-visible {
   font-weight: 400;
 }
 
-.legal-list a,
-.privacy-list a {
+.legal-list a {
   font-weight: 510;
-}
-
-.privacy-list {
-  gap: 25px;
-  width: 373px;
-  line-height: 14px;
-  white-space: nowrap;
-}
-
-.privacy-choice {
-  gap: 25px;
-  width: 201px;
-}
-
-.privacy-choice span:last-child {
-  width: 122px;
-}
-
-.privacy-list > li:last-child {
-  width: 147px;
-}
-
-.privacy-choice-icon {
-  width: 54px;
-  height: 35px;
-  flex: none;
-  overflow: hidden;
-  background-image: url("assets/privacy-sprite-1.png");
-  background-position: -25.71px -127.89px;
-  background-repeat: no-repeat;
-  background-size: 827px 210.27px;
-  mix-blend-mode: multiply;
 }
 
 @media (max-width: 1000px) {
@@ -275,11 +210,6 @@ a:focus-visible {
   .footer-top nav {
     order: 3;
     margin-top: 75px;
-  }
-
-  .footer-bottom nav:last-child {
-    order: 4;
-    margin-top: 28px;
   }
 
   .legal-list {
@@ -316,38 +246,6 @@ a:focus-visible {
 
   .channel-list {
     gap: 24px;
-    width: 472px;
-  }
-
-  .privacy-list {
-    gap: 21px;
-    width: 407px;
-    height: 38px;
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .privacy-list > li:first-child,
-  .privacy-choice {
-    display: contents;
-  }
-
-  .privacy-choice span:last-child {
-    order: 1;
-    width: 143px;
-  }
-
-  .privacy-list > li:last-child {
-    order: 2;
-    width: 171px;
-  }
-
-  .privacy-choice-icon {
-    order: 3;
-    width: 51px;
-    height: 34px;
-    background-position: -24.29px -120.78px;
-    background-size: 781.06px 198.59px;
   }
 }
 
@@ -367,8 +265,7 @@ a:focus-visible {
   }
 
   .footer-bottom nav:first-child,
-  .footer-top nav,
-  .footer-bottom nav:last-child {
+  .footer-top nav {
     width: 100%;
   }
 
@@ -379,16 +276,5 @@ a:focus-visible {
   .channel-list {
     flex-wrap: wrap;
     width: 100%;
-  }
-
-  .privacy-list {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-  }
-
-  .privacy-choice-icon {
-    margin-right: calc(100% - 51px);
   }
 }
